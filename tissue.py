@@ -7,6 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 import json
 from collections import Counter
 import re
+import string
 from tissue_config import MARKDOWN_DIR, BUILD_DIR, TEMPLATE_DIR, STATIC_DIR
 
 # Delete and recreate build directory
@@ -59,7 +60,8 @@ for page in all_pages:
         f.write(html)
 
 def tokenize(text):
-    return re.findall(r"\\b[a-zA-Z]{4,}\\b", text.lower())
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    return re.findall(r"\b[a-zA-Z]{2,}\b", text.lower())
 
 index = []
 for page in all_pages:
