@@ -4,8 +4,6 @@ desc: How to use this site generator
 template: template_default.html
 ---
 
-# Documentation
-
 Welcome to **Tissue**, a Python static site generator.
 
 This file serves both as the project documentation *and* a rendered page in the site.
