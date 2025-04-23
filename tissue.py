@@ -4,6 +4,9 @@ import frontmatter
 import markdown
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
+import json
+from collections import Counter
+import re
 from tissue_config import MARKDOWN_DIR, BUILD_DIR, TEMPLATE_DIR, STATIC_DIR
 
 # Delete and recreate build directory
@@ -54,6 +57,24 @@ for page in all_pages:
     html = template.render(**context)
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)
+
+def tokenize(text):
+    return re.findall(r"\\b[a-zA-Z]{4,}\\b", text.lower())
+
+index = []
+for page in all_pages:
+    if page.get('exclude'):
+        continue
+    tokens = tokenize(page.content)
+    counts = Counter(tokens)
+    keywords = [word for word, freq in counts.items() if freq == 1][:10]  # simple heuristic
+    index.append({
+        "title": page.get("title", ""),
+        "url": "/" + str(page['path'].with_suffix('.html')),
+        "keywords": keywords
+    })
+
+(BUILD_DIR / "search_index.json").write_text(json.dumps(index, indent=2), encoding='utf-8')
 
 # Copy static assets
 if STATIC_DIR.exists():
