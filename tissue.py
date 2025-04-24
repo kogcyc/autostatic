@@ -34,10 +34,7 @@ for md_path in MARKDOWN_DIR.rglob("*.md"):
     section = md_path.parent.name if md_path.parent != MARKDOWN_DIR else "root"
 
     # Select template
-    template_name = page.get("template", "default") + ".html"
-
-    print(f"\n\n {template_name} \n\n")
-
+    template_name = page.get("template", "template_default.html")
     template = env.get_template(template_name)
 
     # Render
@@ -50,7 +47,7 @@ for md_path in MARKDOWN_DIR.rglob("*.md"):
 
     # Append to index
     index.append({
-        "title": title,
+        "title": title,template_name = page.get("template", "default") + ".html"
         "desc": desc,
         "image": image,
         "permalink": permalink,
