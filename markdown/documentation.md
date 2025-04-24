@@ -2,6 +2,8 @@
 title: Documentation
 desc: How to use this site generator
 template: template_default.html
+permalink: /documentation/
+image: /static/images/default.png
 ---
 
 Welcome to **Tissue**, a Python static site generator.
