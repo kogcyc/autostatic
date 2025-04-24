@@ -38,7 +38,16 @@ for md_path in MARKDOWN_DIR.rglob("*.md"):
     template = env.get_template(template_name)
 
     # Render
-    rendered = template.render(content=html, title=title, desc=desc, image=image)
+    rendered = template.render(
+    content=html,
+    title=title,
+    desc=desc,
+    image=image,
+    permalink=permalink,
+    keywords=keywords,
+    section=section,
+    root_pages=index  # or filter to just root-level pages if you want
+    )
 
     # Output path
     out_path = BUILD_DIR / permalink.strip("/")
