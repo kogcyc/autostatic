@@ -5,7 +5,7 @@ async function runSearch() {
   // Create input box
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Search (e.g. "trail frame")';
+  input.placeholder = 'Search (e.g. "cnc dropout")';
   input.style = 'width: 100%; padding: 0.5rem; font-size: 1rem;';
   document.getElementById('searchbox').appendChild(input);
 
