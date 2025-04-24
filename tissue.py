@@ -22,6 +22,15 @@ env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 all_pages = []
 category_pages = {}
 
+def compute_output_path(permalink, rel_path):
+    if permalink:
+        output_path = BUILD_DIR / permalink.strip("/").replace("/", os.sep)
+        if not output_path.suffix:
+            output_path = output_path / "index.html"
+        return output_path
+    else:
+        return BUILD_DIR / rel_path.with_suffix(".html")
+
 for md_path in MARKDOWN_DIR.rglob("*.md"):
     rel_path = md_path.relative_to(MARKDOWN_DIR)
     subdir = rel_path.parent.name if rel_path.parent != Path('.') else 'root'
@@ -30,10 +39,20 @@ for md_path in MARKDOWN_DIR.rglob("*.md"):
     if page.get('exclude'):
         continue  # skip this page if marked as excluded
 
+    # Required fields check
+    for field in ['title', 'desc', 'template', 'image']:
+        if field not in page:
+            print(f"⚠️ Warning: {rel_path} is missing '{field}' in frontmatter")
+
     page['html'] = markdown.markdown(page.content)
     page['path'] = rel_path
-    page['output_path'] = BUILD_DIR / rel_path.with_suffix(".html")
-    
+
+    # Handle permalinks and fallback
+    permalink = page.get('permalink')
+    output_path = compute_output_path(permalink, rel_path)
+    page['output_path'] = output_path
+    page['permalink'] = permalink if permalink else "/" + str(rel_path.with_suffix(".html"))
+
     all_pages.append(page)
 
     key = f"{subdir}_pages"
@@ -59,6 +78,7 @@ for page in all_pages:
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)
 
+# === Build search index ===
 def tokenize(text):
     text = text.translate(str.maketrans('', '', string.punctuation))
     return re.findall(r"\b[a-zA-Z]{2,}\b", text.lower())
@@ -80,7 +100,8 @@ for page in all_pages:
     index.append({
         "title": page.get("title", ""),
         "desc": page.get("desc", ""),
-        "url": "/" + str(rel_path.with_suffix('.html')),
+        "image": page.get("image", ""),
+        "url": page["permalink"],
         "keywords": keywords,
         "category": section
     })
