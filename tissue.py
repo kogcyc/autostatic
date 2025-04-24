@@ -67,13 +67,22 @@ index = []
 for page in all_pages:
     if page.get('exclude'):
         continue
+
+    rel_path = page['path']
+    if rel_path.parent == Path("."):
+        continue  # ❌ skip root-level .md files
+
     tokens = tokenize(page.content)
     counts = Counter(tokens)
-    keywords = [word for word, freq in counts.items() if freq == 1][:10]  # simple heuristic
+    keywords = [word for word, freq in counts.items() if freq == 1][:10]
+    section = rel_path.parent.name
+
     index.append({
         "title": page.get("title", ""),
-        "url": "/" + str(page['path'].with_suffix('.html')),
-        "keywords": keywords
+        "desc": page.get("desc", ""),
+        "url": "/" + str(rel_path.with_suffix('.html')),
+        "keywords": keywords,
+        "category": section
     })
 
 (BUILD_DIR / "search_index.json").write_text(json.dumps(index, indent=2), encoding='utf-8')
