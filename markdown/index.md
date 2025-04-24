@@ -1,7 +1,7 @@
 ---
 title: Home
 desc: Welcome to the site
-template: template_default.html
+template: template_default
 image: /static/images/default.png
 permalink: /
 ---
