@@ -1,7 +1,7 @@
 ---
 title: Search
 desc: The full text search page
-template: template_search.html
+template: template_search
 permalink: /search/
 image: /static/images/default.png
 ---
