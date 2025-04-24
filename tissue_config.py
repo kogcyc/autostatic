@@ -1,7 +1,8 @@
 from pathlib import Path
 
-# Shared config for tissue scripts
-MARKDOWN_DIR = Path("markdown")
-BUILD_DIR = Path("build")
-TEMPLATE_DIR = Path("templates")
-STATIC_DIR = Path("static")
+# Directory paths
+ROOT_DIR = Path(__file__).resolve().parent
+MARKDOWN_DIR = ROOT_DIR / "source"
+BUILD_DIR = ROOT_DIR / "build"
+TEMPLATE_DIR = ROOT_DIR / "templates"
+STATIC_DIR = ROOT_DIR / "static"
