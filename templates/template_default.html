@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ desc }}">
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <h1>{{ page.title }}</h1>
-  <div>{{ page.html|safe }}</div>
+  <h1>{{ title }}</h1>
+  <div>{{ content|safe }}</div>
 
   <h2>Other pages:</h2>
   <ul>
   {% for p in root_pages %}
-    {% if p.path != page.path %}
-      <li><a href="{{ p.path.with_suffix('.html') }}">{{ p.title }}</a></li>
+    {% if p.permalink != permalink %}
+      <li><a href="{{ p.permalink }}">{{ p.title }}</a></li>
     {% endif %}
   {% endfor %}
   </ul>
