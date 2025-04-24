@@ -47,7 +47,7 @@ for md_path in MARKDOWN_DIR.rglob("*.md"):
 
     # Append to index
     index.append({
-        "title": title,template_name = page.get("template", "default") + ".html"
+        "title": title,
         "desc": desc,
         "image": image,
         "permalink": permalink,
