@@ -35,6 +35,9 @@ for md_path in MARKDOWN_DIR.rglob("*.md"):
 
     # Select template
     template_name = page.get("template", "default") + ".html"
+
+    print("\n\n template_name \n\n")
+
     template = env.get_template(template_name)
 
     # Render
