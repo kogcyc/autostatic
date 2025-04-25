@@ -3,6 +3,7 @@ title: Home
 desc: Welcome to the site
 template: template_default.html
 image: /static/images/default.png
+permalink: /index.html
 ---
 
 # Hello from Tissue's index.html!
