@@ -33,9 +33,15 @@ if BUILD_DIR.exists():
 BUILD_DIR.mkdir(parents=True)
 
 # Copy static files
+static_target = BUILD_DIR / "static"
 if STATIC_DIR.exists():
-    # shutil.copytree(STATIC_DIR, BUILD_DIR / "static")
-    shutil.copytree(STATIC_DIR, BUILD_DIR / "static", dirs_exist_ok=True)
+    shutil.copytree(STATIC_DIR, static_target)
+    if VERBOSE:
+        print(f"📁 Freshly copied static assets from {STATIC_DIR} → {static_target}")
+else:
+    if VERBOSE:
+        print("⚠️  No static directory found to copy.")
+
 
 
 # Set up Jinja2
