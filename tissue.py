@@ -142,8 +142,8 @@ with search_index_path.open("w", encoding="utf-8") as f:
     json.dump(searchable_pages, f, indent=2)
 
 # Generate sitemap.xml
-sitemap_path = BUILD_DIR / "sitemap.xml"
-sitemap_base_url = "https://autostatic.vercel.app"  # CHANGE THIS!
+#sitemap_path = BUILD_DIR / "sitemap.xml"
+#sitemap_base_url = "https://autostatic.vercel.app"  # CHANGE THIS!
 
 searchable_pages = [p for p in index if not p.get("pages_exclude")]
 
