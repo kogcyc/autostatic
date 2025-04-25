@@ -4,7 +4,7 @@ import markdown
 import json
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
-from tissue_config import MARKDOWN_DIR, BUILD_DIR, TEMPLATE_DIR, STATIC_DIR
+from tissue_config import MARKDOWN_DIR, BUILD_DIR, TEMPLATE_DIR, STATIC_DIR, sitemap_path, sitemap_base_url
 
 VERBOSE = True
 
