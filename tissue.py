@@ -34,7 +34,9 @@ BUILD_DIR.mkdir(parents=True)
 
 # Copy static files
 if STATIC_DIR.exists():
-    shutil.copytree(STATIC_DIR, BUILD_DIR / "static")
+    # shutil.copytree(STATIC_DIR, BUILD_DIR / "static")
+    shutil.copytree(STATIC_DIR, BUILD_DIR / "static", dirs_exist_ok=True)
+
 
 # Set up Jinja2
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
