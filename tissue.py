@@ -141,5 +141,28 @@ search_index_path = BUILD_DIR / "search_index.json"
 with search_index_path.open("w", encoding="utf-8") as f:
     json.dump(searchable_pages, f, indent=2)
 
+# Generate sitemap.xml
+sitemap_path = BUILD_DIR / "sitemap.xml"
+sitemap_base_url = "https://yourdomain.com"  # CHANGE THIS!
+
+searchable_pages = [p for p in index if not p.get("pages_exclude")]
+
+sitemap_entries = []
+for page in searchable_pages:
+    url = sitemap_base_url.rstrip("/") + page["permalink"]
+    sitemap_entries.append(f"<url><loc>{url}</loc></url>")
+
+sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{''.join(sitemap_entries)}
+</urlset>
+"""
+
+sitemap_path.write_text(sitemap_content, encoding="utf-8")
+
+if VERBOSE:
+    print(f"🗺️ sitemap.xml written with {len(sitemap_entries)} URLs.")
+
+
 if VERBOSE:
     print(f"🔍 search_index.json written with {len(searchable_pages)} pages.")
