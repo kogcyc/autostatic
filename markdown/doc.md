@@ -10,7 +10,8 @@ Tissue Doc
 Tissue is a static web site generator written in Python 3
 
 ### CONFIGURATION ###
-```python
+
+```
 from pathlib import Path
 
 # Directory paths
