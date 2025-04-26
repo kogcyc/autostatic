@@ -1,3 +1,6 @@
+<span align="left">
+  <img src="logo.png" width="400" alt="parabin logo">
+</span>
 
 Tissue is a static web site generator written in Python 3
 
