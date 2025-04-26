@@ -13,9 +13,8 @@ code {
 }
 
 .docheader {
-  background-color: #432;     
-  padding: 20px;                        
+  background-color: #642;     
+  padding: 10px 20px;                        
   border-radius: 6px;            
-  color: #fff; 
-  font-weight: 900;
+  color: #fff;
 }
