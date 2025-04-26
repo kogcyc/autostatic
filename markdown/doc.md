@@ -22,6 +22,9 @@ Tissue is a static web site generator written in Python 3
     ├── tissue_config.py
     └── tissue.py
 
+The pages that make up a static site are stored as Markdown files in the /markdown directory at the root of a project. Those files has an extension of .md. In this example is the Markdown file for the index.html file.
+
+The file named tissue.py is the generator. You run the command `python3 tissue.py` to 'build' the site.
 
 ### CONFIGURATION ###
 
