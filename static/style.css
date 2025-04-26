@@ -1,13 +1,10 @@
 body { background: #fff; font-family: sans-serif; padding: 2rem; }
 
-pre {
+code {
   background-color: #234;     /* background for inline code */
   padding: 20px;              /* some padding around the code */
   overflow-x: auto;           /* horizontal scroll if code too wide */
   border-radius: 6px;         /* nice rounded corners */
-}
-
-code {
   font-family: monospace;     /* makes sure code font is consistent */
   color: #fff;                /* black code color */
 }
