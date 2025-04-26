@@ -1,22 +1,30 @@
 body { background: #fff; font-family: sans-serif; padding: 2rem; }
 
 code {
-  background-color: #234;     /* background for inline code */
-  padding: 10px;              /* some padding around the code */
-  overflow-x: auto;           /* horizontal scroll if code too wide */
-  border-radius: 6px;         /* nice rounded corners */
-  font-family: monospace;     /* makes sure code font is consistent */
-  color: #fff;                /* white code color */
+  background-color: #234;
+  padding: 2px 6px;           /* small padding for inline code */
+  border-radius: 6px;
+  font-family: monospace;
+  color: #fff;
 }
 
 pre {
-  background-color: #234;     /* background for inline code */
-  padding: 10px;              /* some padding around the code */
-  overflow-x: auto;           /* horizontal scroll if code too wide */
-  border-radius: 6px;         /* nice rounded corners */
-  font-family: monospace;     /* makes sure code font is consistent */
-  color: #fff;                /* white code color */
+  background-color: #234;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-family: monospace;
+  color: #fff;
 }
+
+/* pre > code: if code is *inside* pre, reset padding and background */
+pre > code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
 
 .docheader {
   background-color: #741;     
