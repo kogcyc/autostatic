@@ -9,11 +9,11 @@ Tissue Doc
 
 Tissue is a static web site generator written in Python 3
 
-## T U T O R I A L ##
+# T U T O R I A L #
 
-### Lession 1 - hello, world! ###
+## Lession 1 - hello, world! ##
 
-<span class="docheader">This is the directory tree for a minimal project</span>
+### This is the directory tree for a minimal project ###
 
     .
     ├── markdown
@@ -28,7 +28,7 @@ The pages of a static site are stored as Markdown files in the /markdown directo
 
 The file tissue.py is the site generator. To build the site, run the command `python3 tissue.py`.
 
-<span class="docheader">tissue_config.py — Configuration for Tissue Static Site Generator</span>
+### tissue_config.py — Configuration for Tissue Static Site Generator ###
 
     from pathlib import Path
 
@@ -42,8 +42,6 @@ The file tissue.py is the site generator. To build the site, run the command `py
     # sitemap.xml config
     sitemap_path = BUILD_DIR / "sitemap.xml"
     sitemap_base_url = "https://domain.io"  # CHANGE THIS!
-
-
 
 This file defines key directory paths and settings used throughout the Tissue build process.
 
