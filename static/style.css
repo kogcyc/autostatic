@@ -1,15 +1,14 @@
 body { background: #fee; font-family: sans-serif; padding: 2rem; }
 
 pre {
-  background-color: #eee;     /* light gray background */
+
   padding: 1em;               /* some padding around the code */
   overflow-x: auto;           /* horizontal scroll if code too wide */
   border-radius: 6px;         /* nice rounded corners */
-  font-family: monospace;     /* code-like font */
 }
 
 code {
   font-family: monospace;     /* makes sure code font is consistent */
   color: #000;                /* black code color */
-  background-color: #bdf;     /* very light plue background for inline code */
+  background-color: #ddd;     /* light grey background for inline code */
 }
