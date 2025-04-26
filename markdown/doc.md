@@ -27,6 +27,64 @@ Tissue is a static web site generator written in Python 3
 The pages of a static site are stored as Markdown files in the /markdown directory at the root of the project. Each file has a .md extension. For example, the Markdown file index.md will be rendered as index.html.
 
 The file tissue.py is the site generator. To build the site, run the command `python3 tissue.py`.
+- **markdown/**  
+  This directory holds all the source content for the site.  
+  Each file is written in Markdown (`.md`) and must include a YAML frontmatter section specifying metadata like `title`, `desc`, and `template`.
+
+  Example:  
+  - `index.md` → will be rendered into `public/index.html` (or another permalink if specified).
+
+- **static/**  
+  This directory contains static assets such as:
+  - Stylesheets (`.css`)
+  - JavaScript files (`.js`)
+  - Images (`.png`, `.jpg`, etc.)
+
+  During the build process, the entire `static/` directory is copied into `public/static/`.
+
+- **templates/**  
+  This folder stores HTML templates (`.html`) used to render the site.
+  Templates are powered by the Jinja2 templating engine, and they receive variables from the Markdown frontmatter (like `title`, `desc`, and `content`).
+
+  Example:
+  - `template_default.html` — the main default layout for rendered pages.
+
+- **tissue_config.py**  
+  This file defines the directory structure and build settings for the project:
+  - Root project directory
+  - Markdown source directory
+  - Build output directory
+  - Templates directory
+  - Static assets directory
+  - Sitemap base URL
+
+  Update `sitemap_base_url` here to reflect your production domain (e.g., `https://example.com`).
+
+- **tissue.py**  
+  The core site generator script.
+  Running `python3 tissue.py` will:
+  - Clear and rebuild the `public/` output directory
+  - Render each Markdown file into an HTML page
+  - Copy static files
+  - Render partials
+  - Generate a `search_index.json` for client-side search
+  - Generate a `sitemap.xml` for SEO and crawler support
+
+---
+
+## 🚀 To Build the Site
+
+In the project root, run:
+
+```bash
+python3 tissue.py
+```
+
+After building, the output is ready inside the `public/` directory, structured for easy deployment to any static web host (Vercel, Netlify, GitHub Pages, etc).
+
+---
+
+
 
 ### tissue_config.py — Configuration for Tissue Static Site Generator ###
 
