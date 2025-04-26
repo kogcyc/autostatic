@@ -1,4 +1,11 @@
-Tissue Docs
+---
+title: Doc
+desc: Tissue Doc
+image: /static/img/docs.png
+template: template_default.html
+permalink: /doc/
+---
+Tissue Doc
 
 Tissue is a static web site generator written in Python 3
 
