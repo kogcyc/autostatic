@@ -9,6 +9,20 @@ Tissue Doc
 
 Tissue is a static web site generator written in Python 3
 
+# Lession 1 - hello, world! #
+
+
+    This is the directory tree for a minimal system
+    .
+    ├── markdown
+    │   └── index.md
+    ├── static
+    ├── templates
+    │   └── template_default.html
+    ├── tissue_config.py
+    └── tissue.py
+
+
 ### CONFIGURATION ###
 
     from pathlib import Path
