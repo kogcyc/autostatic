@@ -11,10 +11,6 @@ Tissue is a static web site generator written in Python 3
 
 ### CONFIGURATION ###
 
-```
-code
-```
-
     from pathlib import Path
 
     # Directory paths
