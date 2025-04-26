@@ -2,7 +2,7 @@ body { background: #fcc; font-family: sans-serif; padding: 2rem; }
 
 pre {
   background-color: #333;     /* light grey background for inline code */
-  padding: 10px;              /* some padding around the code */
+  padding: 20px;              /* some padding around the code */
   overflow-x: auto;           /* horizontal scroll if code too wide */
   border-radius: 6px;         /* nice rounded corners */
 }
