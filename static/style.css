@@ -1,6 +1,7 @@
 body { background: #fdd; font-family: sans-serif; padding: 2rem; }
 
 pre {
+  background-color: #def;     /* light grey background for inline code */
   padding: 10px;              /* some padding around the code */
   overflow-x: auto;           /* horizontal scroll if code too wide */
   border-radius: 6px;         /* nice rounded corners */
@@ -9,5 +10,4 @@ pre {
 code {
   font-family: monospace;     /* makes sure code font is consistent */
   color: #000;                /* black code color */
-  background-color: #ddd;     /* light grey background for inline code */
 }
