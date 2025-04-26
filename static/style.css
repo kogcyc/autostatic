@@ -1,8 +1,7 @@
-body { background: #fee; font-family: sans-serif; padding: 2rem; }
+body { background: #fdd; font-family: sans-serif; padding: 2rem; }
 
 pre {
-
-  padding: 1em;               /* some padding around the code */
+  padding: 10px;              /* some padding around the code */
   overflow-x: auto;           /* horizontal scroll if code too wide */
   border-radius: 6px;         /* nice rounded corners */
 }
