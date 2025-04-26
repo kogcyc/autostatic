@@ -2,7 +2,7 @@ body { background: #fff; font-family: sans-serif; padding: 2rem; }
 
 code {
   background-color: #234;
-  padding: 4px 8px;           /* more generous padding for inline code */
+  padding: 6px 10px;           /* more generous padding for inline code */
   border-radius: 6px;
   font-family: monospace;
   color: #fff;
