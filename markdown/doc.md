@@ -12,6 +12,7 @@ Tissue is a static web site generator written in Python 3
 # Lession 1 - hello, world! #
 
 <span class="docheader">This is the directory tree for a minimal project</span>
+
     .
     ├── markdown
     │   └── index.md
