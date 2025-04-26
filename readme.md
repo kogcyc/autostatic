@@ -1,5 +1,5 @@
 <span align="left">
-  <img src="logo.png" width="400" alt="Tissue logo">
+  <img src="./tissue_logo.png" width="400" alt="Tissue logo">
 </span>
 
 Tissue is a static web site generator written in Python 3
