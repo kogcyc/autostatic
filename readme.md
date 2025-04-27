@@ -1,3 +1,22 @@
+
+
+<div style="position: relative; display: inline-block;">
+  <img src="https://www.dummyimage.com/300x200/7d417d/ffffff.png&text=+++++++++++++++." alt="Image" style="display: block;">
+  <div style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  ">
+    Tissue
+  </div>
+</div>
+
+
+
 # Tissue #
 <span align="left">
   <img src="./tissue_logo.png" width="400" alt="Tissue logo">
