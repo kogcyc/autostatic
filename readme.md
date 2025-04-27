@@ -1,3 +1,19 @@
+<div style="position: relative; display: inline-block;">
+  <img src="./tissue_logo.png" width="400" alt="Tissue logo" style="display: block;>
+  <div style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  ">
+    Tissue
+  </div>
+</div>
+
+
 <span align="left">
   <img src="./tissue_logo.png" width="400" alt="Tissue logo">
 </span>
@@ -138,7 +154,22 @@ pip3 install -r requirements.txt
 
 ---
 
-## 9. Build Your Site
+## 9. Project Dir Tree
+
+Your project should look like this now:
+
+    .
+    ├── markdown
+    │   └── index.md
+    ├── static
+    ├── templates
+    │   └── template_default.html
+    ├── tissue_config.py
+    └── tissue.py
+
+---
+
+## 10. Build Your Site
 
 In the root directory, run:
 
