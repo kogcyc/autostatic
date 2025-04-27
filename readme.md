@@ -1,28 +1,11 @@
-<div style="position: relative; display: inline-block;">
-  <img src="./tissue_logo.png" width="400" alt="Tissue logo" style="display: block;>
-  <div style="
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-  ">
-    Tissue
-  </div>
-</div>
-
-
+# Tissue #
 <span align="left">
   <img src="./tissue_logo.png" width="400" alt="Tissue logo">
 </span>
 
 Tissue is a static web site generator written in Python 3
 
-
-
-# Tissue Static Site Generator — Step-by-Step Setup
+# A Step-by-Step Guide To Setup
 
 This guide walks you through setting up a minimal Tissue-based static site project.
 
