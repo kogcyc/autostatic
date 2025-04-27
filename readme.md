@@ -144,7 +144,10 @@ Your project should look like this now:
     .
     ├── markdown
     │   └── index.md
+    ├── requirements.txt
     ├── static
+    │   └── images
+    │       └── home.png
     ├── templates
     │   └── template_default.html
     ├── tissue_config.py
