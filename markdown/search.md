@@ -5,7 +5,4 @@ image: /static/img/search.png
 template: template_search.html
 permalink: /search/
 ---
-
-# Search
-
 Type to find pages:
