@@ -18,7 +18,9 @@
   <main>
 
   {% for p in all_pages %}
-    <a href="{{ p.permalink }}">{{ p.title }}</a><br/>
+    {% if "root" in p.groups %}
+      <li><a href="{{ p.permalink }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endfor %}
 
   </main>
