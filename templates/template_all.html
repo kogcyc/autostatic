@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ desc }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ desc }}">
+  {% if image %}
+    <meta property="og:image" content="{{ image }}">
+  {% endif %}
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+  </header>
+
+  <main>
+    <div class="">content: {{ content|safe }} </div>
+
+    <section>
+      {% for p in all_pages %}
+  {% if "projects" in p.groups %}
+   -<a href="{{ p.permalink }}">{{ p.title }}</a><br/>
+  {% endif %}
+{% endfor %}
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+</body>
+</html>
