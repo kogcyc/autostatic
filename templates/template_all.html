@@ -17,9 +17,10 @@
 
   <main>
 
+  B L O G S<br/>  
   {% for p in all_pages %}
     {% if "blog" in p.groups %}
-      <li><a href="{{ p.permalink }}">{{ p.title }}</a></li>
+      - <a href="{{ p.permalink }}">{{ p.title }}</a>
     {% endif %}
   {% endfor %}
 
