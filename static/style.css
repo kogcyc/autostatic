@@ -1,5 +1,4 @@
 
-
 code {
   background-color: #234;
   padding: 6px 10px;           /* more generous padding for inline code */
@@ -24,4 +23,3 @@ pre > code {
   color: inherit;
   font-family: inherit;
 }
-
