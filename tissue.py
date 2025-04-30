@@ -94,6 +94,16 @@ def build_index():
 
     return index
 
+def check_for_duplicate_permalinks(index):
+    seen = {}
+    for page in index:
+        permalink = page["permalink"]
+        if permalink in seen:
+            print(f"🚨 Duplicate permalink found:\n  {seen[permalink]} and\n  {page['title']}\n  → {permalink}")
+        else:
+            seen[permalink] = page["title"]
+
+
 def render_pages(index, env):
     for page in index:
         template = env.get_template(page["template"])
@@ -151,6 +161,7 @@ def main():
     copy_static()
     env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
     index = build_index()
+    check_for_duplicate_permalinks(index)
     render_pages(index, env)
     render_partials(env)
     searchable_pages = generate_search_index(index)
