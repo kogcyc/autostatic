@@ -1,24 +1,30 @@
 
 {% include "partial_header.html" %}
 <body>
-  <header>
-  </header>
+  <header></header>
+
+  <nav>
+    <div class="container">HOME</div>
+  </nav>
 
   <main>
+    <div class="container">
+      B L O G S<br />
+      {% for p in all_pages %} {% if "blog" in p.groups %} -
+      <a href="{{ p.permalink }}">{{ p.title }}</a>
+      {% endif %} {% endfor %}
+    </div>
 
-  B L O G S<br/>  
-  {% for p in all_pages %}
-    {% if "blog" in p.groups %}
-      - <a href="{{ p.permalink }}">{{ p.title }}</a>
-    {% endif %}
-  {% endfor %}
-
-
-<pre><code>{{ all_pages | tojson(indent=2) }}</code></pre>
-    
+    <div class="container">
+      <pre><code>{{ all_pages | tojson(indent=2) }}</code></pre>
+    </div>
   </main>
 
   <footer>
+    <div class="container">
+      <p>&copy; 2025 Acme Sprockets</p>
+    </div>
   </footer>
 </body>
+
 </html>
