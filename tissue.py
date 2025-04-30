@@ -31,6 +31,20 @@ def validate_frontmatter(metadata, filepath):
 def generate_permalink(md_path):
     rel = md_path.relative_to(MARKDOWN_DIR)
     return "/" + rel.with_suffix("").as_posix() + "/"
+    
+def prerender_partials_to_templates():
+    """Render Markdown partials to HTML files inside TEMPLATE_DIR for Jinja includes"""
+    partial_source = TEMPLATE_DIR / "partialsource"
+    if not partial_source.exists():
+        return
+
+    for md_path in partial_source.glob("*.md"):
+        name = md_path.stem
+        html = markdown.markdown(md_path.read_text(encoding="utf-8"))
+        out_path = TEMPLATE_DIR / f"partial_{name}.html"
+        out_path.write_text(html, encoding="utf-8")
+        if VERBOSE:
+            print(f"🧩 Pre-rendered: {out_path.relative_to(TEMPLATE_DIR)}")
 
 def prepare_build_dir():
     if BUILD_DIR.exists():
@@ -133,6 +147,7 @@ def generate_sitemap(pages):
 
 def main():
     prepare_build_dir()
+    prerender_partials_to_templates()
     copy_static()
     env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
     index = build_index()
