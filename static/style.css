@@ -1,4 +1,4 @@
-body { background: #fff; font-family: sans-serif; padding: 2rem; }
+
 
 code {
   background-color: #234;
@@ -25,9 +25,3 @@ pre > code {
   font-family: inherit;
 }
 
-.docheader {
-  background-color: #741;     
-  padding: 10px 20px;                        
-  border-radius: 6px;            
-  color: #fff;
-}
