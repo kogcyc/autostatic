@@ -14,5 +14,6 @@
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/base.css">
+   <link rel="stylesheet" href="/static/precode.css">
 </head>
