@@ -88,8 +88,7 @@ def build_index():
             "permalink": page.get("permalink") or generate_permalink(md_path),
             "template": page.get("template", "template_default.html"),
             "groups": groups,
-            "pages_exclude": page.get("pages_exclude", False),
-            "content": html
+            "pages_exclude": page.get("pages_exclude", False)
         })
 
     return index
