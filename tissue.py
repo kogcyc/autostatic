@@ -80,7 +80,6 @@ def build_index():
             raw_groups = []
 
         groups = [section] + raw_groups
-        print(groups)
 
         index.append({
             "title": page.get("title", ""),
