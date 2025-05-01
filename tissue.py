@@ -72,7 +72,6 @@ def build_index():
         html = markdown.markdown(page.content)
 
         section = md_path.relative_to(MARKDOWN_DIR).parent.name or "root"
-        print(section)
 
         raw_groups = page.get("groups", [])
         if isinstance(raw_groups, str):
@@ -81,6 +80,7 @@ def build_index():
             raw_groups = []
 
         groups = [section] + raw_groups
+        print(groups)
 
         index.append({
             "title": page.get("title", ""),
