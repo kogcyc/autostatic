@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description">
+    <title></title>
+    <style>
+      /* Basic Reset and Box Sizing */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: sans-serif;
+        line-height: 1.5;
+        background: #fff;
+        color: #000;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+      }
+
+      nav .container {
+        padding: 3rem 2rem 0.5rem 2rem;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      a {
+        color: #12c;
+        text-decoration: none;
+        font-weight: 900;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+
+    <nav>
+      <div class="container">
+        <a href="#">Home</a> | <a href="#about">About</a> |
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <h2 id="about">About This Page</h2>
+        <p>
+          This is a clean HTML5 boilerplate for a single-page layout. It's
+          structured using semantic tags and styled using modern CSS — with
+          flexbox for layout and a max-width container for readability.
+        </p>
+
+        <h2 id="contact">Contact</h2>
+        <p>Want to get in touch? Just pretend there's a form here. 😊</p>
+
+        <br />
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Your Name or Company</p>
+      </div>
+    </footer>
+  </body>
+</html>
