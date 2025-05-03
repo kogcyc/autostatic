@@ -1,4 +1,4 @@
-llo{% include "partial_header.html" %}
+{% include "partial_header.html" %}
 
 </head>
 <body>
@@ -6,16 +6,22 @@ llo{% include "partial_header.html" %}
 <header></header>
 
 <nav></nav>
-  
+
   <main>
+    <div class="container">
+
         <h1>{{ title }}</h1>
     {% if desc %}
       <p>{{ desc }}</p>
     {% endif %}
-    
-    <div>
-      {{ content }}
     </div>
+
+         <div>{{ content }}</div> 
+  
+   
+
+
+
 
     <section class="other-pages">
       <h2>Other pages</h2>
@@ -27,9 +33,10 @@ llo{% include "partial_header.html" %}
         {% endfor %}
       </ul>
     </section>
-  </main>
+ 
+</main>
 
-{% include "partial_footer.html" %}hello
+{% include "partial_footer.html" %}
 
 </body>
 </html>
