@@ -4,6 +4,8 @@
 <body>
   
 <header></header>
+
+<nav></nav>
   
   <main>
         <h1>{{ title }}</h1>
@@ -11,8 +13,8 @@
       <p>{{ desc }}</p>
     {% endif %}
     
-    <div class="page-content">
-      {{ content|safe }}
+    <div>
+      {{ content }}
     </div>
 
     <section class="other-pages">
@@ -27,7 +29,7 @@
     </section>
   </main>
 
-<% include partial_footer.html %>
+{% include partial_footer.html %}
 </body>
 </html>
 
