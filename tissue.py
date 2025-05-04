@@ -163,7 +163,7 @@ def main():
     index = build_index()
     check_for_duplicate_permalinks(index)
     render_pages(index, env)
-    render_partials(env)
+    # render_partials(env)
     searchable_pages = generate_search_index(index)
     generate_sitemap(searchable_pages)
 
