@@ -82,6 +82,7 @@ def build_index():
         groups = [section] + raw_groups
 
         index.append({
+            "content": html,
             "title": page.get("title", ""),
             "desc": page.get("desc", ""),
             "image": page.get("image", ""),
