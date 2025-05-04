@@ -26,7 +26,7 @@
 
       <h2>Other pages</h2>
       <ul>
-        {% for p in root_pages %}
+        {% for p in all_pages %}
           {% if p.permalink != permalink %}
             <li><a href="{{ p.permalink }}">{{ p.title }}</a></li>
           {% endif %}
