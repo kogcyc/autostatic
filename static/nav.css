@@ -1,1 +1,18 @@
+.nav-item-left {
+  transform: scale(1.0);
+  transform-origin: left center;
+}
 
+.nav-item-right {
+  transform: scale(1.0);
+  transform-origin: right center;
+}
+
+.nav-container {
+  background-color: #f99;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: auto;
+  height: 40px;
+  padding: 4px 10px 0 10px;
+}
