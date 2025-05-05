@@ -9,7 +9,7 @@
 }
 
 .nav-container {
-  background-color: #ccc;
+  background-color: #fea;
   display: grid;
   grid-template-columns: 1fr 30px;
   grid-template-rows: auto;
