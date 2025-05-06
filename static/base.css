@@ -28,36 +28,6 @@
       main {
         flex: 1;
       }
-      /* Basic Reset and Box Sizing */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        font-family: sans-serif;
-        line-height: 1.5;
-        background: #fff;
-        color: #000;
-      }
-
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 1rem 2rem;
-      }
-
-      nav .container {
-        padding: 3rem 2rem 0.5rem 2rem;
-      }
-
-      main {
-        flex: 1;
-      }
 
       a {
         color: #12c;
