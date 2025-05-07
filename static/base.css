@@ -21,10 +21,6 @@
         padding: 1rem 1rem;
       }
 
-      nav .interior {
-        padding: 3rem 1rem 0.5rem 1rem;
-      }
-
       main {
         flex: 1;
       }
