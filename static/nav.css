@@ -17,7 +17,12 @@
       text-align: right;
     }
 
-    .nav-item-left img,
-    .nav-item-right img {
+    .nav-item-left img[alt="Home"],
+    .nav-item-right img[alt="Home"] {
       height: 100%;
+      position: relative;
+      top: -5px;
     }
+
+
+
