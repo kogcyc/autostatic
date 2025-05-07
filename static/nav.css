@@ -1,18 +1,23 @@
-.nav-item-left {
-  transform: scale(1);
-  transform-origin: left center;
-}
+    .nav-interior {
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 30px;
+      height: 40px;
+      padding: 4px 0 0 0;
+    }
 
-.nav-item-right {
-  transform: scale(1);
-  transform-origin: right center;
-}
+    .nav-item-left {
+      transform: scale(1);
+      transform-origin: left center;
+    }
 
-.nav-container {
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 30px;
-  grid-template-rows: auto;
-  height: 40px;
-  padding: 4px 0px 0px 0px;
-}
+    .nav-item-right {
+      transform: scale(1);
+      transform-origin: right center;
+      text-align: right;
+    }
+
+    .nav-item-left img,
+    .nav-item-right img {
+      height: 100%;
+    }
