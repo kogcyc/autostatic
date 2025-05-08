@@ -52,17 +52,13 @@
 
       <!-- Sidebar Column -->
 	<aside class="sprockets-sidebar">
-	  <h2>More to Explore</h2>
 	  <ul class="teasers">
 	    {% for page in all_pages %}
 	      <li class="teaser">
 		<a href="{{ page.permalink }}">
 		  <h3>{{ page.title }}</h3>
-		  <p>{{ page.excerpt or page.summary or page.content[:100] ~ '...' }}</p>
-			<img
-            			src="https://picsum.photos/1200/800?random=2"
-            			alt="Detail shot"
-          		/>
+		  <p>{{ page.desc }}</p>
+
 		</a>
 	      </li>
 	    {% endfor %}
