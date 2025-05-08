@@ -17,36 +17,65 @@
      </a>
     </div>
    </div>
-  </div>
- </nav>
- <main>
+  </div><main>
   <div class="container">
-   <h1>
-    {{ title }}
-   </h1>
-   {% if desc %}
-   <p>
-    {{ desc }}
-   </p>
-   {% endif %}
-   <div>
-    {{ content }}
-   </div>
-   <h2>
-    Other pages
-   </h2>
-   <ul>
-    {% for p in all_pages %}
-          {% if p.permalink != permalink %}
-    <li>
-     <a href="{{ p.permalink }}">
-      {{ p.title }}
-     </a>
-    </li>
-    {% endif %}
-        {% endfor %}
-   </ul>
+    <div class="sprockets-layout">
+      <!-- Main Article Column -->
+      <div class="sprockets-main">
+        <header class="sprockets-header">
+          <h1>Rambler Frame Set</h1>
+          <p>Comfortable. Durable. Ready to explore.</p>
+          <img
+            src="https://picsum.photos/1200/800?random=1"
+            alt="Rambler Frame"
+          />
+        </header>
+
+        <article class="sprockets-article">
+          <p>
+            The Rambler is designed for riders who care about comfort and
+            reliability. It absorbs road vibration without compromising
+            efficiency.
+          </p>
+
+          <img
+            src="https://picsum.photos/1200/800?random=2"
+            alt="Detail shot"
+          />
+
+          <p>
+            Learn more about sizing, finish options, and pricing on our product
+            details page.
+          </p>
+        </article>
+      </div>
+
+      <!-- Sidebar Column -->
+	<aside class="sprockets-sidebar">
+	  <h2>More to Explore</h2>
+	  <ul class="teasers">
+	    {% for page in all_pages %}
+	      <li class="teaser">
+		<a href="{{ page.permalink }}">
+		  <h3>{{ page.title }}</h3>
+		  <p>{{ page.excerpt or page.summary or page.content[:100] ~ '...' }}</p>
+			<img
+            			src="https://picsum.photos/1200/800?random=2"
+            			alt="Detail shot"
+          		/>
+		</a>
+	      </li>
+	    {% endfor %}
+	  </ul>
+	</aside>
+
+    </div>
   </div>
- </main>
+</main>
+ </nav>
+
+
+
+ 
  {% include "partial_footer.html" %}
 </body>
