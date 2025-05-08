@@ -52,17 +52,17 @@
 
       <!-- Sidebar Column -->
 	<aside class="sprockets-sidebar">
-	  <ul class="teasers">
+	  <div class="teasers">
 	    {% for page in all_pages %}
-	      <li class="teaser">
+	      <div class="teaser">
 		<a href="{{ page.permalink }}">
 		  <h3>{{ page.title }}</h3>
 		  <p>{{ page.desc }}</p>
 
 		</a>
-	      </li>
+	      </div>
 	    {% endfor %}
-	  </ul>
+	  </div>
 	</aside>
 
     </div>
