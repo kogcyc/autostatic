@@ -1,0 +1,42 @@
+/* === Sprockets Two-Column Layout === */
+.sprockets-layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.sprockets-main {
+  flex: 2;
+  min-width: 300px;
+}
+
+.sprockets-sidebar {
+  flex: 1;
+  min-width: 250px;
+}
+
+.sprockets-header {
+  margin-bottom: 1rem;
+}
+
+.sprockets-header img,
+.sprockets-article img,
+.sprockets-teaser img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+.sprockets-teaser {
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .sprockets-layout {
+    flex-direction: column;
+  }
+}
