@@ -53,12 +53,25 @@
       <!-- Sidebar Column -->
 	<aside class="sprockets-sidebar">
 	  <div class="teasers">
+{% set a = 2 %}
+
+
+		  
 	    {% for page in all_pages %}
+
+{% set a= a + 1 %}
+		  
 	      <div class="teaser">
 		<a href="{{ page.permalink }}">
 		  <h3>{{ page.title }}</h3>
 		  <p>{{ page.desc }}</p>
 
+          <img
+            src="https://picsum.photos/1200/800?random={{a}}"
+            alt="Detail shot"
+          />
+
+			
 		</a>
 	      </div>
 	    {% endfor %}
