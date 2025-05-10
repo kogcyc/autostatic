@@ -20,6 +20,13 @@
   margin-bottom: 1rem;
 }
 
+.sprockets-sidebar .teasers .teaser {
+  background: #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+
 .sprockets-header img,
 .sprockets-article img,
 .sprockets-teaser img {
