@@ -21,7 +21,8 @@
 }
 
 .sprockets-sidebar .teasers .teaser {
-  border: 1px solid #000;
+  border: 0px solid #000;
+  background: #ddd;
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 10px;
@@ -67,5 +68,10 @@
 @media (max-width: 800px) {
   .sprockets-layout {
     flex-direction: column;
+  }
+  .sprockets-sidebar .teasers .teaser a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1em;
   }
 }
