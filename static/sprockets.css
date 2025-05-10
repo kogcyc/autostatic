@@ -32,6 +32,15 @@
   text-decoration: none;
 }
 
+.sprockets-sidebar .teasers .teaser a h4 {
+  font-weight: 900;
+}
+
+.sprockets-sidebar .teasers .teaser a p {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
 .sprockets-header img,
 .sprockets-article img,
 .sprockets-teaser img {
