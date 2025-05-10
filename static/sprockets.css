@@ -27,6 +27,10 @@
   margin-bottom: 10px;
 }
 
+.sprockets-sidebar .teasers .teaser a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .sprockets-header img,
 .sprockets-article img,
