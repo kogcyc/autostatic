@@ -29,6 +29,13 @@
   margin: 1rem 0;
 }
 
+.sprockets-sidebar .teasers img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .sprockets-teaser {
   border-top: 1px solid #ccc;
   padding-top: 1rem;
