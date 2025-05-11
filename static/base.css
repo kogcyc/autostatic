@@ -35,6 +35,10 @@
         text-decoration: underline;
       }
 
+      header {
+        margin-bottom: 11px;
+      }
+
       footer {
         background: #000;
         color: #fff;
