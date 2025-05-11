@@ -89,7 +89,7 @@ def build_index():
             "permalink": page.get("permalink") or generate_permalink(md_path),
             "template": page.get("template", "template_default.html"),
             "groups": groups,
-            "pages_exclude": page.get("pages_exclude", False)
+            "exclude_this_page_from_index": page.get("exclude_this_page_from_index", False)
         })
 
     return index
@@ -132,7 +132,7 @@ def render_partials(env):
                 print(f"🧹 Partial rendered: {out_path.relative_to(BUILD_DIR)}")
 
 def generate_search_index(index):
-    searchable_pages = [p for p in index if not p.get("pages_exclude")]
+    searchable_pages = [p for p in index if not p.get("exclude_this_page_from_index")]
     path = BUILD_DIR / "search_index.json"
     with path.open("w", encoding="utf-8") as f:
         json.dump(searchable_pages, f, indent=2)
