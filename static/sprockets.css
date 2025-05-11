@@ -20,43 +20,36 @@
   margin-bottom: 1rem;
 }
 
-.sprockets-sidebar .teasers .teaser {
-  border: 0px solid #000;
+.sprockets-header img,
+.sprockets-article img,
+.sprockets-teaser img,
+.sprockets-sidebar .teasers img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sprockets-sidebar .teaser {
   background: #ddd;
+  border: 0;
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 10px;
 }
 
-.sprockets-sidebar .teasers .teaser a {
+.sprockets-sidebar .teaser a {
   color: inherit;
   text-decoration: none;
   font-size: 0.8em;
 }
 
-.sprockets-sidebar .teasers .teaser a h4 {
+.sprockets-sidebar .teaser a h4 {
   font-weight: 900;
 }
 
-.sprockets-sidebar .teasers .teaser a p {
+.sprockets-sidebar .teaser a p {
   font-weight: 400;
   margin-bottom: 10px;
-}
-
-.sprockets-header img,
-.sprockets-article img,
-.sprockets-teaser img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem 0;
-}
-
-.sprockets-sidebar .teasers img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 .sprockets-teaser {
@@ -65,13 +58,13 @@
   margin-top: 1rem;
 }
 
+/* Responsive layout */
 @media (max-width: 800px) {
   .sprockets-layout {
     flex-direction: column;
   }
-  .sprockets-sidebar .teasers .teaser a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1em;
+
+  .sprockets-sidebar .teaser a {
+    font-size: 1em;
   }
 }
