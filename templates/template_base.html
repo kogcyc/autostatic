@@ -57,7 +57,7 @@
 <aside class="sprockets-sidebar">
   <div class="teasers">
     {% set ns = namespace(a=3) %}
-    {% for page in all_pages %}
+    {% for page in all_pages if not page.exclude_this_page_from_index %}
       <div class="teaser">
         <a href="{{ page.permalink }}">
           <h3>{{ page.title }}</h3>
