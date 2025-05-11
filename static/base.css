@@ -46,6 +46,8 @@
       }
 
 
-
+nav, main {
+  outline: 1px dashed red;
+}
 
 
