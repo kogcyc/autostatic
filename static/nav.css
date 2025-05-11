@@ -19,7 +19,7 @@
 
     .nav-item-left img[alt="Home"],
     .nav-item-right img[alt="Menu"] {
-      height: 100%;
+      height: 80%;
       position: relative;
       top: -5px;
     }
