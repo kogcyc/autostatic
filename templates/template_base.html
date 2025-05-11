@@ -66,7 +66,8 @@
             src="https://picsum.photos/1200/800?random={{ ns.a }}"
             alt="Detail shot"
           />
-        </a>
+        </a><p>{{ page.content }}</p>
+
       </div>
       {% set ns.a = ns.a + 1 %}
     {% endfor %}
