@@ -1,13 +1,14 @@
+
     .nav-interior {
       background-color: #fff;
       display: grid;
       grid-template-columns: 1fr 30px;
-      height: 30px;
+      height: 20px;
       padding: 4px 0 0 0;
     }
 
     .nav-item-left {
-      transform: scale(1);
+      transform: scale(1.2);
       transform-origin: left center;
     }
 
@@ -23,6 +24,3 @@
       position: relative;
       top: -1px;
     }
-
-
-
